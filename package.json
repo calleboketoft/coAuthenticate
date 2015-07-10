@@ -1,7 +1,7 @@
 {
   "name": "coAuthenticate",
   "version": "0.0.1",
-  "main": "server/server.js",
+  "main": "www/components/coAuthenticate.js",
   "engines": {
     "node": "0.10.33"
   },
