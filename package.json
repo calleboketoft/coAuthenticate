@@ -1,0 +1,24 @@
+{
+  "name": "coAuthenticate",
+  "version": "0.0.1",
+  "main": "server/server.js",
+  "engines": {
+    "node": "0.10.33"
+  },
+  "devDependencies": {
+    "express": "^4.13.1",
+    "jspm": "^0.16.0-beta.3"
+  },
+  "jspm": {
+    "directories": {
+      "baseURL": "www"
+    },
+    "dependencies": {
+      "angular": "github:angular/bower-angular@^1.4.2",
+      "angular-ui-router": "github:angular-ui/ui-router@^0.2.15"
+    },
+    "devDependencies": {
+      "typescript": "github:mhegazy/typescript@v1.5-beta2"
+    }
+  }
+}
