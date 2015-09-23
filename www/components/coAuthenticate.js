@@ -51,7 +51,7 @@ function coAuthenticateService ($q, $state, $rootScope, coAuthenticateConfig, ap
 
   let initialRequestRes
 
-  function login (email, password) {
+  function login () {
     var argsArr = Array.prototype.slice.call(arguments)
     apiService.login.apply(null, argsArr)
       .then((res) => {
