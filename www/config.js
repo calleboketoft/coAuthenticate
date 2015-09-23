@@ -1,25 +1,24 @@
 System.config({
-  "baseURL": "/",
-  "defaultJSExtensions": true,
-  "transpiler": "typescript",
-  "paths": {
-    "github:*": "jspm_packages/github/*"
+  baseURL: "/",
+  defaultJSExtensions: true,
+  transpiler: "typescript",
+  paths: {
+    "github:*": "jspm_packages/github/*",
+    "npm:*": "jspm_packages/npm/*"
   },
-  "packages": {
+
+  packages: {
     "app": {
       "defaultExtension": "ts"
     }
-  }
-});
+  },
 
-System.config({
-  "map": {
-    "angular": "github:angular/bower-angular@1.4.2",
+  map: {
+    "angular": "github:angular/bower-angular@1.4.6",
     "angular-ui-router": "github:angular-ui/ui-router@0.2.15",
-    "typescript": "github:mhegazy/typescript@v1.5-beta2",
+    "typescript": "npm:typescript@1.6.2",
     "github:angular-ui/ui-router@0.2.15": {
-      "angular": "github:angular/bower-angular@1.4.2"
+      "angular": "github:angular/bower-angular@1.4.6"
     }
   }
 });
-
