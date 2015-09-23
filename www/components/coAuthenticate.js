@@ -52,7 +52,8 @@ function coAuthenticateService ($q, $state, $rootScope, coAuthenticateConfig, ap
   let initialRequestRes
 
   function login (email, password) {
-    apiService.login(email, password)
+    var argsArr = Array.prototype.slice.call(arguments)
+    apiService.login.apply(null, argsArr)
       .then((res) => {
         $state.go(coAuthenticateConfig.loadingState)
         makeInitialRequest().then(() => {
@@ -64,7 +65,8 @@ function coAuthenticateService ($q, $state, $rootScope, coAuthenticateConfig, ap
   }
 
   function logout () {
-    apiService.logout().then(() => {
+    var argsArr = Array.prototype.slice.call(arguments)
+    apiService.logout.apply(null, argsArr).then(() => {
       $window.location.reload()
     })
   }
