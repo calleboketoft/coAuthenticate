@@ -32,7 +32,7 @@ class ApiService {
       this.$timeout(() => {
         resolve()
       }, 1000)
-    }
+    })
   }
 
   clearAuthToken () {
