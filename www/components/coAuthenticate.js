@@ -16,6 +16,7 @@ export default angular.module('coAuthenticate', [])
   rootState: 'root',
   goToStateAfterLogin: 'root.app',
   loginState: 'root.login',
+  registerState: 'root.register',
   authTokenName: 'authToken'
 })
 
@@ -138,7 +139,7 @@ function coAuthenticateService ($q, $state, $rootScope, coAuthenticateConfig, ap
       } else {
         // NOT AUTHENTICATED
         // =================
-        if (!(toState.name === coAuthenticateConfig.loginState)) {
+        if (!(toState.name === coAuthenticateConfig.loginState) || !(toState.name === coAuthenticateConfig.registerState)) {
           event.preventDefault()
           $state.go(coAuthenticateConfig.loginState)
         }
