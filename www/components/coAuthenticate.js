@@ -139,7 +139,7 @@ function coAuthenticateService ($q, $state, $rootScope, coAuthenticateConfig, ap
       } else {
         // NOT AUTHENTICATED
         // =================
-        if (!(toState.name === coAuthenticateConfig.loginState) || !(toState.name === coAuthenticateConfig.registerState)) {
+        if (!(toState.name === coAuthenticateConfig.loginState) && !(toState.name === coAuthenticateConfig.registerState)) {
           event.preventDefault()
           $state.go(coAuthenticateConfig.loginState)
         }
